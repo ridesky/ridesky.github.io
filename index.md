@@ -1,0 +1,72 @@
+theme: light
+
+[slide]
+
+### 个人简历
+-  姓名: 邹天琦 / 男 / 1993.12.20
+-  电话: 17600233590
+-  E-mail: qtz235689@gmail.com
+-  Github: https://github.com/ridesky  
+-  学历: 本科 / 长春理工光电信息学院
+-  专业:软件工程
+-  工作经验: 1年
+
+[slide]
+
+### 技能树
+-   html+css+js基础核心,了解es6/es7常用新特性
+-   工作期间使用过less进行css编译
+-   熟练使用vue框架及vue全家桶进行开发
+-   熟悉jquery框架,对已经淘汰过的方法进行简单的扩展
+-   熟悉commonJS规范 了解es6模块化
+-   有过git svn版本控制工具和webpack打包工具的经验
+-   了解nodejs及express,socket.io框架
+-   了解c#面向对象基础
+
+[slide]
+
+### 工作经历
+
+- 2016.08-2017.01 avepoint径点科技 前端开发
+- 2014.11-2015-01  北京中装新网  web前端实习
+
+[slide]
+
+### 项目介绍
+1.**项目名称**: [avepoint英文站](http://www.avepoint.com/) 新站制作
+    
+- **项目描述**: 2016年8月-9月 在avepoint入职期间  参与开发并维护[avepoint英文站](http://www.avepoint.com/) (首页可能自动转cn中文站,右上角可更改)美国、英国、新加坡、澳大利亚等国家地区网站,每日接收来自各个地区邮件新提的task,并及时完成,在这一段的期间巩固了css布局的常用技巧及js的一些常用的对象封装方法,在工作中开始熟悉less,并对svn的流程有了一些认识. 工作中多多少少解决过一些没有实现的功能,如通过正则过滤内部标签的方式来实现页面向facebook、google+、twitter发送分享功能.
+
+[slide]
+
+2.**项目名称**  [avepoint中文站](https://www.avepoint.com/cn/) 新站制作
+
+- **项目描述** 10月-12月 参与开发[avepoint中文站](http://www.avepoint.com/cn)的首页及子页面的制作,利用jQuery框架和bootstrap技术进行pc端和移动端的响应式开发,利用原生js、css3和开源插件编写一些常见的动画效果,也在工作中开始熟悉nodejs及gulp压缩工具
+
+[slide]
+
+### 独立github项目 你画我猜 
+
+- [你画我猜-前端项目链接](https://github.com/ridesky/my_ydig)
+- [你画我猜-server端项目链接](https://github.com/ridesky/my_ydig_server)
+
+没有参考任何源码,完全独立编写基于socket.io和vue全家桶的《你画我猜》在线多人游戏前后端项目,因为是使用 socket.io框架,通信功能几乎全是异步方式实现的,所以遇到了不少异步及监听机制的坑,在client端遇到的问题已经通过removelistener方法解决,同时也遇到过node的单线程机制导致的全局污染的坑,后来也通过函数内部声明解决了,目前主体的游戏功能已经实现,未来会对代码进行优化和UI美化.
+
+[slide]
+
+### 求职意向
+- 岗位:前端开发
+- 性质:全职
+- 离职中,随时可上岗
+
+[slide]
+
+### 杂七杂八
+
+- 独立,个性耿直,喜欢简单粗暴,不喝酒,不抽烟,不喜欢跟风.
+- 学习能力快,作为新人,在avepoint转正后直接跳到band B,和团队leader谈笑风生 (逃
+- 极度尊重有技术,有原创精神的大神,不喜欢没有能力空谈大话的,以及抄袭狗.
+- 希望能加入一个热爱使用前端新技术,有nodejs开发氛围,有原创精神的公司.
+- 足球狂热粉~
+- 电影迷,喜爱昆汀,但不恋足、不重口....
+- 其实我是一个好孩子,你别欺负我.
