@@ -41,7 +41,7 @@
   * 工作中多多少少解决过一些没有实现的功能,如通过正则过滤内部标签的方式来实现页面向 facebook、google+、twitter 发送分享功能.
   * 在这一段的期间巩固了css 布局的常用技巧及 js 的一些常用的对象封装方法,在工作中开始熟悉less,并对svn的流程有了一些认识. 
 * **项目名称**  [avepoint中文站](https://www.avepoint.com/cn/) 新站制作
-  * 10月-12月 参与开发 [avepoint中文站](http://www.avepoint.com/cn) 的首页及子页面的开发.
+  * 10月-1月 参与开发 [avepoint中文站](http://www.avepoint.com/cn) 的首页及子页面的开发.
   * 利用 jQuery 框架和 bootstrap 技术进行 pc 端和移动端的响应式开发.
   * 使用原生 js、css3 和开源插件编写一些常见的动画效果及后代数据的提取.
   * 利用部署好的打包工具对代码进行压缩,在工作中逐渐熟悉 nodejs 及压缩工具.
