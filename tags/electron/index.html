@@ -18,12 +18,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>归档 - 早起傻一天。</title>
+  <title>标签：electron - 早起傻一天。</title>
 
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://ridesky.github.io/archives/2022/index.html">
+<meta property="og:title" content="早起傻一天。">
+<meta property="og:url" content="https://ridesky.github.io/tags/electron/index.html">
 <meta property="og:site_name" content="早起傻一天。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Ridesky Zou">
@@ -88,6 +88,8 @@
       
 
   
+
+
   <div class='nav-wrap'>
   <nav class='sub post cap'>
     
@@ -100,93 +102,34 @@
     
     
       
-        <a href='/tags'>标签</a>
+        <a class='active' href='/tags'>标签：electron</a>
       
     
     
       
-        <a class='active' href='/archives'>归档</a>
+        <a href='/archives'>归档</a>
       
     
   </nav>
 </div>
 
-  <div class='post-list'>
-  	
-  	
-  		
-  		
-  			
-  		
-  	
-  		
-  		
-  	
-  		
-  		
-  	
-  		
-  		
-  	
-  	
-  		<article class='' id='archive'>
-  			<div class='archive-header h4'>2022</div>
-  			
-  				
-  		    
-  				
-  		    
-  				
-  		    
-  				
-  		    
-  				<div class='archive-list'>
-            <a class='post fs14' href="/electron/2022-07-09-%E5%A4%9A%E5%B1%8F%E8%AE%BE%E7%BD%AE%E4%BD%8D%E7%BD%AEbug/">
-    					<time>07-09</time>
-    					<span>
-                
-      						跨屏子窗口(BrowserWindow)位置bug解决方案
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/electron/2022-07-09-vue-devtools/">
-    					<time>07-09</time>
-    					<span>
-                
-      						vue-devtools 植入到electron
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/vscode/2022-07-09-prettier-%E9%85%8D%E7%BD%AE/">
-    					<time>07-09</time>
-    					<span>
-                
-      						prettier-配置
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/hello-world/">
-    					<time>07-07</time>
-    					<span>
-                
-      						Hello World
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  		</article>
-  	
-  </div>
+  <div class="post-list post"><a class="post-card post " href="/electron/2022-07-09-%E5%A4%9A%E5%B1%8F%E8%AE%BE%E7%BD%AE%E4%BD%8D%E7%BD%AEbug/">
+<article class="md"><h2 class="post-title">跨屏子窗口(BrowserWindow)位置bug解决方案</h2><div class="excerpt"><p>生成子窗口(BrowserWindow) 在设置窗口 x,y 坐标位置时,在多显示器分辨率不一致时,实际位置,宽度会与设定的值不一致.但是在设置窗口后约 1 秒左右再次设置窗口时,位置,宽度会在正确位置. 目前我判断原因是在跨屏幕后,chrome 内核需要时间调整像素与 dpi 比例.
+
+来自 Github Issue同样猜想的依据
+
+所以,处理方式为设置 setTimeout 10 秒
+1...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-07-09T04:01:46.000Z">2022-07-09</time></span><span class="cap breadcrumb">Electron 爬坑日志</span></div></article>
+</a><a class="post-card post " href="/electron/2022-07-09-vue-devtools/">
+<article class="md"><h2 class="post-title">vue-devtools 植入到electron</h2><div class="excerpt"><p>
+克隆 vue-devtools 库到本地后 git branch add-remote-devtools  切换到 add-remote-devtools 分支
+在 shells\chrome 目录中修改 mainfest.json 字段 persistent 为 true
+npm run build 打包 完成后 将chrome文件夹复制到项目里 如 seek 项目中 src\chrom...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-07-09T03:53:06.000Z">2022-07-09</time></span><span class="cap breadcrumb">Electron 爬坑日志</span></div></article>
+</a></div>
+  
+
+
+
 
 
       

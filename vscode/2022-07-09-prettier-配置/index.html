@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>prettier-配置 - 早起傻一天。</title>
+
+  
+    <meta name="description" content="prettier 格式化配置vscode 配置:1.安装 Prettier - Code formatter 插件: 2. 按快捷键 “ctrl + , “ 打开设置界面 输入 “defaultformatter” 按照如下图设置  注意是用户设置 而不是工作区设置, 如果在工作区设置,则会在项目目录里生成一个 setting.json 文件 而不是全局设置:    3. 在 setting.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="prettier-配置">
+<meta property="og:url" content="https://ridesky.github.io/vscode/2022-07-09-prettier-%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="早起傻一天。">
+<meta property="og:description" content="prettier 格式化配置vscode 配置:1.安装 Prettier - Code formatter 插件: 2. 按快捷键 “ctrl + , “ 打开设置界面 输入 “defaultformatter” 按照如下图设置  注意是用户设置 而不是工作区设置, 如果在工作区设置,则会在项目目录里生成一个 setting.json 文件 而不是全局设置:    3. 在 setting.js">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image3.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image4.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image5.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image6.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image7.png">
+<meta property="article:published_time" content="2022-07-09T02:48:51.000Z">
+<meta property="article:modified_time" content="2022-07-09T03:48:26.143Z">
+<meta property="article:author" content="Ridesky Zou">
+<meta property="article:tag" content="vscode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image1.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://avatars.githubusercontent.com/u/9549254?s=96&v=4" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">早起傻一天。</div><div class="sub normal cap">ridesky.me</div><div class="sub hover cap" style="opacity:0">zoutianqi.com</div></a></div>
+<nav class="menu dis-select"><a class="nav-item active" href="/">博客</a><a class="nav-item" href="/about/">更多</a></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vscode-%E9%85%8D%E7%BD%AE"><span class="toc-text">vscode 配置:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Prettier-Code-formatter-%E6%8F%92%E4%BB%B6"><span class="toc-text">1.安装 Prettier - Code formatter 插件:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8C%89%E5%BF%AB%E6%8D%B7%E9%94%AE-%E2%80%9Cctrl-%E2%80%9C-%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE%E7%95%8C%E9%9D%A2-%E8%BE%93%E5%85%A5-%E2%80%9Cdefaultformatter%E2%80%9D-%E6%8C%89%E7%85%A7%E5%A6%82%E4%B8%8B%E5%9B%BE%E8%AE%BE%E7%BD%AE"><span class="toc-text">2. 按快捷键 “ctrl + , “ 打开设置界面 输入 “defaultformatter” 按照如下图设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9C%A8-setting-json-%E6%96%87%E4%BB%B6%E9%87%8C%E5%A2%9E%E5%8A%A0%E5%A6%82%E4%B8%8B%E5%AD%97%E6%AE%B5-%E5%A6%82%E6%9E%9C%E6%96%87%E4%BB%B6%E9%87%8C%E5%B7%B2%E7%BB%8F%E6%9C%89%E5%A6%82%E4%B8%8B%E4%B8%A4%E4%B8%AA%E5%AD%97%E6%AE%B5-%E5%88%99%E5%BF%BD%E7%95%A5%E6%AD%A4%E6%AD%A5%E9%AA%A4"><span class="toc-text">3. 在 setting.json 文件里增加如下字段 (如果文件里已经有如下两个字段,则忽略此步骤)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%A8%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%AD-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%BA-prettierrc-%E8%AF%A5%E6%96%87%E4%BB%B6%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%AE%9A%E4%B9%89-%E6%A0%BC%E5%BC%8F%E8%A7%84%E5%88%99-%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E5%85%B1%E5%90%8C%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E6%97%B6%E7%BB%9F%E4%B8%80%E8%A7%84%E5%88%99-%E6%AF%94%E5%A6%82"><span class="toc-text">4. 在项目根目录中 添加文件名为 .prettierrc, 该文件可以自定义 格式规则,方便大家共同开发项目时统一规则. 比如:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BB%BC%E4%B8%8A%E6%89%80%E8%BF%B0-%E6%8C%89%E5%BF%AB%E6%8D%B7%E9%94%AE-shift-alt-f-%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%8D%B3%E7%9C%8B%E5%88%B0%E6%95%88%E6%9E%9C"><span class="toc-text">5. 综上所述, 按快捷键 shift + alt + f 格式化即看到效果.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%8F%AF%E4%BB%A5%E8%AE%BE%E7%BD%AE%E5%9C%A8%E4%BF%9D%E5%AD%98%E6%96%87%E4%BB%B6%E6%97%B6-%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%96%87%E4%BB%B6-%E9%A3%9F%E7%94%A8%E6%95%88%E6%9E%9C%E6%9B%B4%E4%BD%B3"><span class="toc-text">6. 可以设置在保存文件时 自动格式化文件(食用效果更佳)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webstorm-%E9%85%8D%E7%BD%AE"><span class="toc-text">webstorm 配置:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-%E4%BD%BF%E7%94%A8%E5%89%8D%E8%AF%B7%E5%85%88%E6%A3%80%E6%9F%A5-webstorm-%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E4%BA%86-prettier-%E6%8F%92%E4%BB%B6-%E6%88%91%E9%BB%98%E8%AE%A4%E6%98%AF%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%AE%8C%E7%9A%84-%E5%B9%B6%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E5%A5%BD%E4%BA%86-node-js"><span class="toc-text">0. 使用前请先检查 webstorm 是否安装了 prettier 插件 (我默认是已经安装完的),并已经安装好了 node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E5%85%A8%E5%B1%80%E4%BE%9D%E8%B5%96"><span class="toc-text">1,安装全局依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Ctrl-Alt-S-%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE-prettier"><span class="toc-text">2. Ctrl+Alt+S 打开设置界面配置 prettier</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9C%A8%E9%A1%B9%E7%9B%AE%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%AD-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%BA-prettierrc-%E8%AF%A5%E6%96%87%E4%BB%B6%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%AE%9A%E4%B9%89-%E6%A0%BC%E5%BC%8F%E8%A7%84%E5%88%99-%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E5%85%B1%E5%90%8C%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E6%97%B6%E7%BB%9F%E4%B8%80%E8%A7%84%E5%88%99-%E6%AF%94%E5%A6%82"><span class="toc-text">3. 在项目根目录中 添加文件名为 .prettierrc, 该文件可以自定义 格式规则,方便大家共同开发项目时统一规则. 比如:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#eslint-%E6%90%AD%E9%85%8D-prettier-%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81-%E6%9C%AA%E5%BC%80%E5%90%AFeslint%E7%9A%84%E8%AF%9D%E5%8F%AF%E6%9A%82%E6%97%B6%E5%BF%BD%E7%95%A5%E6%AD%A4%E5%A4%84"><span class="toc-text">eslint 搭配 prettier 解决冲突(未开启eslint的话可暂时忽略此处):</span></a></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/VSCode/">VSCode</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-07-09T02:48:51.000Z">2022-07-09</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>prettier-配置</span></h1>
+<h1 id="prettier-格式化配置"><a href="#prettier-格式化配置" class="headerlink" title="prettier 格式化配置"></a>prettier 格式化配置</h1><h2 id="vscode-配置"><a href="#vscode-配置" class="headerlink" title="vscode 配置:"></a><strong>vscode 配置:</strong></h2><h3 id="1-安装-Prettier-Code-formatter-插件"><a href="#1-安装-Prettier-Code-formatter-插件" class="headerlink" title="1.安装 Prettier - Code formatter 插件:"></a>1.安装 Prettier - Code formatter 插件:</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image1.png"></p>
+<h3 id="2-按快捷键-“ctrl-“-打开设置界面-输入-“defaultformatter”-按照如下图设置"><a href="#2-按快捷键-“ctrl-“-打开设置界面-输入-“defaultformatter”-按照如下图设置" class="headerlink" title="2. 按快捷键 “ctrl + , “ 打开设置界面 输入 “defaultformatter” 按照如下图设置"></a>2. 按快捷键 “ctrl + , “ 打开设置界面 输入 “defaultformatter” 按照如下图设置</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image2.png"></p>
+<blockquote>
+<p>注意是用户设置 而不是工作区设置, 如果在工作区设置,则会在项目目录里生成一个 setting.json 文件 而不是全局设置:</p>
+</blockquote>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image3.png"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image4.jpg"></p>
+<h3 id="3-在-setting-json-文件里增加如下字段-如果文件里已经有如下两个字段-则忽略此步骤"><a href="#3-在-setting-json-文件里增加如下字段-如果文件里已经有如下两个字段-则忽略此步骤" class="headerlink" title="3. 在 setting.json 文件里增加如下字段 (如果文件里已经有如下两个字段,则忽略此步骤)"></a>3. 在 setting.json 文件里增加如下字段 (如果文件里已经有如下两个字段,则忽略此步骤)</h3><blockquote>
+<p>Windows 路径为 “C:\Users%username%\AppData\Roaming\Code\User\settings.json”</p>
+</blockquote>
+<blockquote>
+<p>mac 目录<del>自强🙃</del></p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;editor.defaultFormatter&quot;</span><span class="punctuation">:</span> <span class="string">&quot;esbenp.prettier-vscode&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;[javascript]&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;editor.defaultFormatter&quot;</span><span class="punctuation">:</span> <span class="string">&quot;esbenp.prettier-vscode&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-在项目根目录中-添加文件名为-prettierrc-该文件可以自定义-格式规则-方便大家共同开发项目时统一规则-比如"><a href="#4-在项目根目录中-添加文件名为-prettierrc-该文件可以自定义-格式规则-方便大家共同开发项目时统一规则-比如" class="headerlink" title="4. 在项目根目录中 添加文件名为 .prettierrc, 该文件可以自定义 格式规则,方便大家共同开发项目时统一规则. 比如:"></a>4. 在项目根目录中 添加文件名为 .prettierrc, 该文件可以自定义 格式规则,方便大家共同开发项目时统一规则. 比如:</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;printWidth&quot;</span><span class="punctuation">:</span> <span class="number">120</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;semi&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bracketSpacing&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;jsxBracketSameLine&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;singleQuote&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;proseWrap&quot;</span><span class="punctuation">:</span> <span class="string">&quot;never&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trailingComma&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-综上所述-按快捷键-shift-alt-f-格式化即看到效果"><a href="#5-综上所述-按快捷键-shift-alt-f-格式化即看到效果" class="headerlink" title="5. 综上所述, 按快捷键 shift + alt + f 格式化即看到效果."></a>5. 综上所述, 按快捷键 shift + alt + f 格式化即看到效果.</h3><h3 id="6-可以设置在保存文件时-自动格式化文件-食用效果更佳"><a href="#6-可以设置在保存文件时-自动格式化文件-食用效果更佳" class="headerlink" title="6. 可以设置在保存文件时 自动格式化文件(食用效果更佳)"></a>6. 可以设置在保存文件时 自动格式化文件(食用效果更佳)</h3><ul>
+<li>按快捷键 “ctrl + , “ 打开设置界面 输入 “format on save” 按照如下图设置</li>
+</ul>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image5.png"></p>
+<h2 id="webstorm-配置"><a href="#webstorm-配置" class="headerlink" title="webstorm 配置:"></a><strong>webstorm 配置:</strong></h2><p>参考自链接 <a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/webstorm/managing-plugins.html">https://www.jetbrains.com/help/webstorm/managing-plugins.html</a></p>
+<h3 id="0-使用前请先检查-webstorm-是否安装了-prettier-插件-我默认是已经安装完的-并已经安装好了-node-js"><a href="#0-使用前请先检查-webstorm-是否安装了-prettier-插件-我默认是已经安装完的-并已经安装好了-node-js" class="headerlink" title="0. 使用前请先检查 webstorm 是否安装了 prettier 插件 (我默认是已经安装完的),并已经安装好了 node.js"></a>0. 使用前请先检查 webstorm 是否安装了 prettier 插件 (我默认是已经安装完的),并已经安装好了 node.js</h3><p>快捷键 ctrl + alt + s 打开设置 检查是否已安装</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image6.png"></p>
+<h3 id="1-安装全局依赖"><a href="#1-安装全局依赖" class="headerlink" title="1,安装全局依赖"></a>1,安装全局依赖</h3><p>npm install –global prettier</p>
+<h3 id="2-Ctrl-Alt-S-打开设置界面配置-prettier"><a href="#2-Ctrl-Alt-S-打开设置界面配置-prettier" class="headerlink" title="2. Ctrl+Alt+S 打开设置界面配置 prettier"></a>2. Ctrl+Alt+S 打开设置界面配置 prettier</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/ridesky/images-tc/images/image7.png"></p>
+<h3 id="3-在项目根目录中-添加文件名为-prettierrc-该文件可以自定义-格式规则-方便大家共同开发项目时统一规则-比如"><a href="#3-在项目根目录中-添加文件名为-prettierrc-该文件可以自定义-格式规则-方便大家共同开发项目时统一规则-比如" class="headerlink" title="3. 在项目根目录中 添加文件名为 .prettierrc, 该文件可以自定义 格式规则,方便大家共同开发项目时统一规则. 比如:"></a>3. 在项目根目录中 添加文件名为 .prettierrc, 该文件可以自定义 格式规则,方便大家共同开发项目时统一规则. 比如:</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;printWidth&quot;</span><span class="punctuation">:</span> <span class="number">120</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;semi&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;bracketSpacing&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;jsxBracketSameLine&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;singleQuote&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;proseWrap&quot;</span><span class="punctuation">:</span> <span class="string">&quot;never&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;trailingComma&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>默认 Ctrl+Shift+Alt+P 快捷键即可格式化文件生效</li>
+</ol>
+<h2 id="eslint-搭配-prettier-解决冲突-未开启eslint的话可暂时忽略此处"><a href="#eslint-搭配-prettier-解决冲突-未开启eslint的话可暂时忽略此处" class="headerlink" title="eslint 搭配 prettier 解决冲突(未开启eslint的话可暂时忽略此处):"></a>eslint 搭配 prettier 解决冲突(未开启eslint的话可暂时忽略此处):</h2><p>参考自 </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/prettier/eslint-plugin-prettier">GitHub - prettier&#x2F;eslint-plugin-prettier: ESLint plugin for Prettier formatting</a></p>
+<p>在项目中安装 eslint-plugin-prettier 和eslint-config-prettier 两个依赖. 前者负责让prettier 以 eslint 规则运行 , 后者负责配置prettier</p>
+<p>.eslintrc.js 添加如下配置</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">extends<span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;xxxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;plugin:prettier/recommended&quot;</span> <span class="comment">// 放在最后</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">rules<span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;prettier/prettier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;error&quot;</span> <span class="comment">// 配置</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p>Time。</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/hello-world/">Hello World<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/electron/2022-07-09-vue-devtools/">vue-devtools 植入到electron<span class="note">较新</span></a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body beaudar'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="beaudar" repo="ridesky/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+
+    </div>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<p>本站由 <a href="https://ridesky.github.io/">@Ridesky Zou</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadBeaudar() {
+    const els = document.querySelectorAll("#comments #beaudar");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://beaudar.lipk.org/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+      loadBeaudar();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
